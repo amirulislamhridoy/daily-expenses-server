@@ -8,5 +8,5 @@ const getAllExpenses = async ( req, res) => {
         console.log(error.message)
     }
 }
-
+// mongoose schema
 module.exports = {getAllExpenses}
