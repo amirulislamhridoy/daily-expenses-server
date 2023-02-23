@@ -2,7 +2,10 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 5000;
 require('./config/db')
+const cors = require("cors");
 const getAllExpenses = require('./routes/getAllExpenses.router')
+
+app.use(cors());
 
 app.use('/', getAllExpenses)
 
