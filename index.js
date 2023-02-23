@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 5000;
 require('./config/db')
+const getAllExpenses = require('./routes/getAllExpenses')
+
+app.use('/', getAllExpenses)
 
 app.get('/', (req, res) => {
     //   res.send('Hello World!')
